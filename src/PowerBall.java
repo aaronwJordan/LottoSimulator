@@ -12,25 +12,24 @@ public class PowerBall extends lottoGame
 
     public static void playGame()
     {
-        int[] fiveSelect = new int[lottoGame.getMAX_PLAYS()]; // THIS IS WRONG, DO NOT USE MAX PLAYS
-        // Maxplays is for all 5 plays, not the 5 numbers you're picking INSIDE a single play, change that
+        int[] fiveSelect = new int[getMAX_PLAYS()];
         Scanner userInput = new Scanner(System.in);
         System.out.println("Welcome to Powerball! How many plays today? (Up to 5): ");
         int numberOfPlays = Integer.parseInt(userInput.nextLine());
 
-        System.out.println("Would you like to use EASY PICK? (y/n): ");
+        System.out.println("Would you like to use EASY PICK? [The computer chooses for you] (y/n): ");
         String easyPickChoice = String.valueOf(userInput.nextLine());
 
         if (easyPickChoice.equals("Y") || easyPickChoice.equals("y"))
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < numberOfPlays; i++)
             {
                 fiveSelect[i] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
             }
         }
         else if (easyPickChoice.equals("N") || easyPickChoice.equals("n"))
         {
-            //send to another method letting user select specific numbers
+            userSelectNumbers();
         }
         else
         {
@@ -38,11 +37,8 @@ public class PowerBall extends lottoGame
         }
     }
 
-    public static int generateRandomIntegers(final int MIN, final int MAX)
+    public static void userSelectNumbers()
     {
-        Random rand = new Random();
-        int randomInteger = rand.nextInt((MAX - MIN) + 1) + MIN;
 
-        return randomInteger;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Created by AaronJordan on 4/7/14.
  */
@@ -36,5 +38,13 @@ public class lottoGame
     public static void foo()
     {
 
+    }
+
+    public static int generateRandomIntegers(final int MIN, final int MAX)
+    {
+        Random rand = new Random();
+        int randomInteger = rand.nextInt((MAX - MIN) + 1) + MIN;
+
+        return randomInteger;
     }
 }
