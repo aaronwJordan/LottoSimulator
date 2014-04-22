@@ -3,7 +3,7 @@
  */
 public class HotLotto extends lottoGame
 {
-    public HotLotto(int plays[])
+    public HotLotto(int plays[][])
     {
         super(plays);
     }

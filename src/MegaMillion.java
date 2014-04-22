@@ -3,7 +3,7 @@
  */
 public class MegaMillion extends lottoGame
 {
-    public MegaMillion(int plays[])
+    public MegaMillion(int plays[][])
     {
         super(plays);
     }

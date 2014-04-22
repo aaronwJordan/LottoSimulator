@@ -5,19 +5,25 @@ import java.util.*;
  */
 public class lottoGame
 {
-    private static int plays[];
-    private static final int MAX_PLAYS = 5;
+    private static int gamePlays[][];
+    private static final int MAX_PICK_NUM = 5;
     private static final int MIN_POWERBALL_NUM = 1;
     private static final int MAX_POWERBALL_NUM = 59;
+    private static final int MAX_REDPOWERBALL_NUM = 35;
 
-    protected static int[] getPlays()
+    protected static int[][] getGamePlays()
     {
-        return plays;
+        return gamePlays;
     }
 
-    protected static final int getMAX_PLAYS()
+    protected static void setGamePlays(int[][] array)
     {
-        return MAX_PLAYS;
+        gamePlays = array;
+    }
+
+    protected static final int getMAX_PICK_NUM()
+    {
+        return MAX_PICK_NUM;
     }
 
     protected static final int getMIN_POWERBALL_NUM()
@@ -30,14 +36,9 @@ public class lottoGame
         return MAX_POWERBALL_NUM;
     }
 
-    public lottoGame(int plays[])
+    public lottoGame(int gamePlays[][])
     {
-        plays = new int[MAX_PLAYS];
-    }
-
-    public static void foo()
-    {
-
+        gamePlays = new int[MAX_PICK_NUM][MAX_PICK_NUM];
     }
 
     public static int generateRandomIntegers(final int MIN, final int MAX)
