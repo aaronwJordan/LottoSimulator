@@ -28,7 +28,7 @@ public class Control
                 case 3:
                     break;
                 default:
-                    System.out.println("DEFAULTED!!");
+                    System.out.println("You did not enter a valid number, play again to restart");
                     break;
             }
 

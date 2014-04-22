@@ -10,13 +10,14 @@ public class PowerBall extends lottoGame
         super(plays);
     }
 
-    private static int [][] tempArray = new int[getMAX_PICK_NUM()][getMAX_PICK_NUM()];
+    private static int [][] whiteBallPicks = new int[getMAX_PICK_NUM()][getMAX_PICK_NUM()];
+    private static int [][] powerBallPicks = new int[getMAX_PICK_NUM()][1];
 
     public static void playGame()
     {   int[] fiveSelect = new int[getMAX_PICK_NUM()];
         int playCounter = 0;
         Scanner userInput = new Scanner(System.in);
-        System.out.print("Welcome to Powerball! How many plays today? (Up to 5): ");
+        System.out.print("\nWelcome to Powerball! How many plays today? (Up to 5): ");
         int numberOfPlays = Integer.parseInt(userInput.nextLine());
 
         System.out.print("Would you like to use EASY PICK? [The computer chooses for you] (y/n): ");
@@ -57,15 +58,23 @@ public class PowerBall extends lottoGame
             fiveSelect[i] = Integer.parseInt(userInput.nextLine());
         }
 
+        System.out.print("Pick your PowerBall number (1-35): ");
+        powerBallPicks[counter][0] = Integer.parseInt(userInput.nextLine());
+
         for (int i = 0; i < getMAX_PICK_NUM(); i++)
         {
-            tempArray[counter][i] = fiveSelect[i];
+            whiteBallPicks[counter][i] = fiveSelect[i];
         }
 
-        /*for (int[] arr: tempArray)
+        for (int[] arr: whiteBallPicks)
         {
             System.out.println(Arrays.toString(arr));
-        }*/
+        }
+
+        for (int[] arr: powerBallPicks)
+        {
+            System.out.println(Arrays.toString(arr));
+        }
 
     }
 }
