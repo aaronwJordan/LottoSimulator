@@ -48,4 +48,14 @@ public class lottoGame
 
         return randomInteger;
     }
+
+    public static void drawWhiteBalls()
+    {
+
+    }
+
+    public static void drawPowerBalls()
+    {
+
+    }
 }

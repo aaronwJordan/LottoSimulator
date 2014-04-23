@@ -45,6 +45,8 @@ public class PowerBall extends lottoGame
         {
             System.out.println("You did not specify yes or no, play again to restart");
         }
+
+
     }
 
     public static void userSelectNumbers(int[] fiveSelect, int counter)
@@ -75,6 +77,10 @@ public class PowerBall extends lottoGame
         {
             System.out.println(Arrays.toString(arr));
         }
+    }
+
+    public void timeToDraw()
+    {
 
     }
 }
