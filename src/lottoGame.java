@@ -36,6 +36,11 @@ public class lottoGame
         return MAX_POWERBALL_NUM;
     }
 
+    protected static final int getMAX_REDPOWERBALL_NUM()
+    {
+        return MAX_REDPOWERBALL_NUM;
+    }
+
     public lottoGame(int gamePlays[][])
     {
         gamePlays = new int[MAX_PICK_NUM][MAX_PICK_NUM];

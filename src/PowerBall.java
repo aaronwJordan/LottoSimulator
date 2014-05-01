@@ -27,7 +27,11 @@ public class PowerBall extends lottoGame
         {
             for (int j = 0; j < numberOfPlays; j++)
             {
+
                 fiveSelect[j] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
+                whiteBallPicks[playCounter][0] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
+                timeToDraw(fiveSelect);
+                playCounter++;
             }
         }
         else if (easyPickChoice.equals("N") || easyPickChoice.equals("n"))
@@ -45,8 +49,6 @@ public class PowerBall extends lottoGame
         {
             System.out.println("You did not specify yes or no, play again to restart");
         }
-
-
     }
 
     public static void userSelectNumbers(int[] fiveSelect, int counter)
@@ -68,19 +70,46 @@ public class PowerBall extends lottoGame
             whiteBallPicks[counter][i] = fiveSelect[i];
         }
 
-        for (int[] arr: whiteBallPicks)
+        System.out.println("Okay! Your numbers are now selected.");
+        System.out.print("\nYour numbers for your first play are: ");
+        for (int i = 0; i < getMAX_PICK_NUM(); i++)
         {
+            System.out.print(fiveSelect[i] + ", ");
+        }
+        System.out.println("with a PowerBall of: " + powerBallPicks[0][0]);
+
+        timeToDraw(fiveSelect);
+
+        //Debug purposes
+        /*for (int[] arr: whiteBallPicks)
+        {
+            System.out.print("\n");
             System.out.println(Arrays.toString(arr));
         }
 
         for (int[] arr: powerBallPicks)
         {
             System.out.println(Arrays.toString(arr));
-        }
+        }*/
     }
 
-    public void timeToDraw()
+    public static void timeToDraw(int[] fiveSelect)
     {
+        int[] drawCompare = new int[getMAX_PICK_NUM()];
 
+        for (int i = 0; i < getMAX_PICK_NUM(); i++)
+        {
+            drawCompare[i] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
+        }
+
+        System.out.println("\nTime to check your numbers!");
+        System.out.print("The computer has drawn: ");
+
+        for (int i = 0; i < getMAX_PICK_NUM(); i++)
+        {
+            System.out.print(drawCompare[i] + ", ");
+        }
+
+        System.out.print("with a PowerBall of ");
     }
 }
