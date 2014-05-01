@@ -8,7 +8,7 @@ public class lottoGame
     private static int gamePlays[][];
     private static final int MAX_PICK_NUM = 5;
     private static final int MIN_POWERBALL_NUM = 1;
-    private static final int MAX_POWERBALL_NUM = 59;
+    private static final int MAX_WHITEPOWERBALL_NUM = 59;
     private static final int MAX_REDPOWERBALL_NUM = 35;
 
     protected static int[][] getGamePlays()
@@ -33,7 +33,7 @@ public class lottoGame
 
     protected static final int getMAX_POWERBALL_NUM()
     {
-        return MAX_POWERBALL_NUM;
+        return MAX_WHITEPOWERBALL_NUM;
     }
 
     protected static final int getMAX_REDPOWERBALL_NUM()

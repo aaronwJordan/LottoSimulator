@@ -16,7 +16,16 @@ public class Control
             System.out.println("2.) MegaMillion");
             System.out.println("3.) HotLotto");
             System.out.print("Enter the number of the game you would like to play: ");
-            int userChoice = Integer.parseInt(userInput.nextLine());
+            int userChoice = 0;
+            try
+            {
+                userChoice = Integer.parseInt(userInput.nextLine());
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("\nPlease enter only a valid number. Restart to play again.");
+                break;
+            }
 
             switch (userChoice)
             {
@@ -28,7 +37,7 @@ public class Control
                 case 3:
                     break;
                 default:
-                    System.out.println("You did not enter a valid number, play again to restart");
+                    System.out.println("You did not enter a valid number, play again to restart.");
                     break;
             }
 
@@ -36,6 +45,6 @@ public class Control
             playAgain = userInput.nextLine();
         }
         while (playAgain.equals("Y") || playAgain.equals("y"));
-        System.out.print("Exiting..");
+        System.out.print("\nExiting..");
     }
 }
