@@ -17,19 +17,17 @@ public class PowerBall extends lottoGame
     {
         int[] fiveSelect = new int[getMAX_PICK_NUM()];
         int playCounter = 0;
-        int numberOfPlays = 0;
+        int numberOfPlays;
         Scanner userInput = new Scanner(System.in);
-        System.out.print("\nWelcome to Powerball! How many plays today? (Up to 5): ");
-        try
-        {
-            numberOfPlays = Integer.parseInt(userInput.nextLine());
-        }
+        System.out.print("\nWelcome to PowerBall! How many plays today? (Up to 5): ");
+
+        try{numberOfPlays = Integer.parseInt(userInput.nextLine());}
         catch (NumberFormatException e)
         {
             System.out.println("\nPlease enter only numbers.");
             return;
         }
-        if (numberOfPlays < 1 || numberOfPlays > 5)
+        if (numberOfPlays < getMIN_POWERBALL_NUM() || numberOfPlays > getMAX_PICK_NUM())
         {
             System.out.println("\nPlease enter only a valid number of plays.");
             return;
@@ -40,17 +38,18 @@ public class PowerBall extends lottoGame
 
         if (easyPickChoice.equals("Y") || easyPickChoice.equals("y"))
         {
+            int computerCounter = 0;
             for (int j = 0; j < numberOfPlays; j++)
             {
                 for (int k = 0; k < getMAX_PICK_NUM(); k++)
                 {
-                    fiveSelect[j] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
+                    fiveSelect[k] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
                 }
-                whiteBallPicks[playCounter][0] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
-                playCounter++;
+                powerBallPicks[computerCounter][0] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
+                numbersNowSelected(fiveSelect, computerCounter);
+                //timeToDraw(fiveSelect);
+                computerCounter++;
             }
-            numbersNowSelected(fiveSelect);
-            timeToDraw(fiveSelect);
         }
         else if (easyPickChoice.equals("N") || easyPickChoice.equals("n"))
         {
@@ -83,33 +82,22 @@ public class PowerBall extends lottoGame
         System.out.print("Pick your PowerBall number (1-35): ");
         powerBallPicks[counter][0] = Integer.parseInt(userInput.nextLine());
 
+        numbersNowSelected(fiveSelect, counter);
+    }
+
+    public static void numbersNowSelected(int[] fiveSelect, int counter)
+    {
         for (int i = 0; i < getMAX_PICK_NUM(); i++)
         {
             whiteBallPicks[counter][i] = fiveSelect[i];
+            //counter++;
         }
 
-        numbersNowSelected(fiveSelect);
-
-        //Debug purposes
-        /*for (int[] arr: whiteBallPicks)
-        {
-            System.out.print("\n");
-            System.out.println(Arrays.toString(arr));
-        }
-
-        for (int[] arr: powerBallPicks)
-        {
-            System.out.println(Arrays.toString(arr));
-        }*/
-    }
-
-    public static void numbersNowSelected(int[] fiveSelect)
-    {
         System.out.println("Okay! Your numbers are now selected.");
         System.out.print("\nYour numbers for your first play are: ");
         for (int i = 0; i < getMAX_PICK_NUM(); i++)
         {
-            System.out.print(fiveSelect[i] + ", ");
+            System.out.print(whiteBallPicks[0][i] + ", ");
         }
         System.out.println("with a PowerBall of: " + powerBallPicks[0][0]);
 
@@ -135,5 +123,54 @@ public class PowerBall extends lottoGame
 
         int tempPowerBall = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
         System.out.printf("with a PowerBall of %d", tempPowerBall);
+
+        anyMatching(fiveSelect, drawCompare, tempPowerBall);
+    }
+
+    public static void anyMatching(int[] fiveSelect, int[] compareTo, int computerPowerBall)
+    {
+        boolean powerBallHit = false;
+        int matchHit = 0;
+        int rowCounter = 0;
+        int powerBallCounter = 0;
+        for (int i = 0; i < getMAX_PICK_NUM(); i++)
+        {
+            for (int k = 0; k < getMAX_PICK_NUM(); k++)
+            {
+                if (compareTo[k] == whiteBallPicks[rowCounter][i])
+                {
+                    matchHit++;
+                    whiteBallPicks[rowCounter][i] = 0; // Setting each element to 0 so they don't get counted again
+                    break;
+                }
+            }
+
+            if (computerPowerBall == powerBallPicks[powerBallCounter][0])
+            {
+                //matchHit++; don't want the user to think they got x matching AND a powerball matching
+                powerBallHit = true;
+            }
+
+            //rowCounter++;
+            powerBallCounter++;
+        }
+
+        System.out.println("\nYou have " + matchHit + " matching number(s)!");
+        if (powerBallHit)
+            System.out.println("You have a matching PowerBall!");
     }
 }
+
+
+
+//Debug purposes
+        /*for (int[] arr: whiteBallPicks)
+        {
+            System.out.print("\n");
+            System.out.println(Arrays.toString(arr));
+        }
+
+        for (int[] arr: powerBallPicks)
+        {
+            System.out.println(Arrays.toString(arr));
+        }*/

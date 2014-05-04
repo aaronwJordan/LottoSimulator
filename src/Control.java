@@ -17,10 +17,8 @@ public class Control
             System.out.println("3.) HotLotto");
             System.out.print("Enter the number of the game you would like to play: ");
             int userChoice = 0;
-            try
-            {
-                userChoice = Integer.parseInt(userInput.nextLine());
-            }
+
+            try {userChoice = Integer.parseInt(userInput.nextLine());}
             catch (NumberFormatException e)
             {
                 System.out.println("\nPlease enter only a valid number. Restart to play again.");
