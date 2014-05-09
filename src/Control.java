@@ -38,8 +38,10 @@ public class Control
                     PowerBall.playGame();
                     break;
                 case 2:
+                    MegaMillion.playGame();
                     break;
                 case 3:
+                    HotLotto.playGame();
                     break;
                 default:
                     System.out.println("You did not enter a valid number, play again to restart.");

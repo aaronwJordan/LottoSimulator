@@ -46,7 +46,7 @@ public class PowerBall extends lottoGame
                 setUserWallet(getUserWallet() - getPowerBallPricePerPlay());
                 for (int k = 0; k < getMAX_PICK_NUM(); k++)
                 {
-                    fiveSelect[k] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
+                    fiveSelect[k] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_WHITEPOWERBALL_NUM());
                 }
                 powerBallPicks[computerCounter][0] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
                 numbersNowSelected(fiveSelect, computerCounter);
@@ -115,7 +115,7 @@ public class PowerBall extends lottoGame
 
         for (int i = 0; i < getMAX_PICK_NUM(); i++)
         {
-            drawCompare[i] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
+            drawCompare[i] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_WHITEPOWERBALL_NUM());
         }
 
 

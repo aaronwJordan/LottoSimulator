@@ -16,6 +16,9 @@
     <rightPanel />
     <splitter proportion="0.5" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Homework3$Control.coverage" NAME="Control Coverage Results" MODIFIED="1399656941186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -60,23 +63,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/PowerBall.java" line="161" class="PowerBall" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,27 +76,25 @@
       <file leaf-file-name="Control.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Control.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="40" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1071">
+            <state line="31" column="22" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lottoGame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="lottoGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="850">
-              <folding>
-                <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-              </folding>
+            <state line="36" column="75" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.2260579" vertical-offset="307" max-vertical-offset="1445">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PowerBall.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PowerBall.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PowerBall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="2850" selection-end="2850" vertical-scroll-proportion="0.12313003" vertical-offset="1134" max-vertical-offset="3910">
+            <state line="57" column="32" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="3910">
               <folding />
             </state>
           </provider>
@@ -118,7 +103,7 @@
       <file leaf-file-name="MegaMillion.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MegaMillion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
+            <state line="12" column="56" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3927">
               <folding />
             </state>
           </provider>
@@ -127,7 +112,7 @@
       <file leaf-file-name="HotLotto.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotLotto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="33" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
+            <state line="21" column="52" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="3910">
               <folding />
             </state>
           </provider>
@@ -143,17 +128,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/MegaMillion.java" />
-        <option value="$PROJECT_DIR$/src/HotLotto.java" />
-        <option value="$PROJECT_DIR$/src/lottoGame.java" />
         <option value="$PROJECT_DIR$/src/Control.java" />
         <option value="$PROJECT_DIR$/src/PowerBall.java" />
+        <option value="$PROJECT_DIR$/src/lottoGame.java" />
+        <option value="$PROJECT_DIR$/src/HotLotto.java" />
+        <option value="$PROJECT_DIR$/src/MegaMillion.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -445,12 +432,14 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Homework3" />
       <envs />
+      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -711,12 +700,13 @@
       <workItem from="1399246479375" duration="4507000" />
       <workItem from="1399564882627" duration="599000" />
       <workItem from="1399576632296" duration="27000" />
-      <workItem from="1399654129958" duration="1757000" />
+      <workItem from="1399654129958" duration="4962000" />
+      <workItem from="1399659113112" duration="754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95046000" />
+    <option name="totallyTimeSpent" value="99005000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -739,7 +729,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -747,6 +737,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6013216" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -761,21 +752,21 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27848774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2782705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.311674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -793,8 +784,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -850,9 +841,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="952">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,9 +876,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="952">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -924,9 +911,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="952">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,9 +946,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="52" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="952">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -998,9 +981,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="33" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="782">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,9 +1016,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="782">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,9 +1051,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="24" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,9 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="22" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="187">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,39 +1140,37 @@
         <state line="64" column="0" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="850" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotLotto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MegaMillion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="850">
-          <folding>
-            <element signature="method#lottoGame#0;class#lottoGame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Control.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1071">
+        <state line="31" column="22" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PowerBall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2850" selection-end="2850" vertical-scroll-proportion="0.12313003" vertical-offset="1134" max-vertical-offset="3910">
+        <state line="57" column="32" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="3910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MegaMillion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="56" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3927">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotLotto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="52" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="3910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lottoGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="75" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.2260579" vertical-offset="307" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>
