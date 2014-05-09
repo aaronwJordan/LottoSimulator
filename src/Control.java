@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by AaronJordan on 4/7/14.
@@ -9,6 +9,14 @@ public class Control
     {
         Scanner userInput = new Scanner(System.in);
         String playAgain;
+        final int onTheHouse = 100; // The House is so generous
+        int userChoice;
+
+        System.out.println("\nWelcome to Aaron's Lottery Simulator!");
+        System.out.println("The house has kindly given you $100.00 to start out with. Be prudent! It's all you will get.");
+        lottoGame.setUserWallet(onTheHouse);
+        System.out.println("Current wallet amount: $" + lottoGame.getUserWallet());
+        System.out.println("---------");
 
         do
         {
@@ -16,7 +24,6 @@ public class Control
             System.out.println("2.) MegaMillion");
             System.out.println("3.) HotLotto");
             System.out.print("Enter the number of the game you would like to play: ");
-            int userChoice = 0;
 
             try {userChoice = Integer.parseInt(userInput.nextLine());}
             catch (NumberFormatException e)
@@ -43,6 +50,8 @@ public class Control
             playAgain = userInput.nextLine();
         }
         while (playAgain.equals("Y") || playAgain.equals("y"));
+
+        System.out.println("You have left today with $" + lottoGame.getUserWallet());
         System.out.print("\nExiting..");
     }
 }

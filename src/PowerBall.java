@@ -19,7 +19,9 @@ public class PowerBall extends lottoGame
         int playCounter = 0;
         int numberOfPlays;
         Scanner userInput = new Scanner(System.in);
-        System.out.print("\nWelcome to PowerBall! How many plays today? (Up to 5): ");
+        System.out.println("\nWelcome to PowerBall! Each play is $2.00 and each panel is a separate play.");
+        System.out.println("Add a PowerPlay for $1.00 more to multiply your winnings! (PowerPlay is always attached to each play)");
+        System.out.print("How many plays today? (Up to 5): ");
 
         try{numberOfPlays = Integer.parseInt(userInput.nextLine());}
         catch (NumberFormatException e)
@@ -41,13 +43,13 @@ public class PowerBall extends lottoGame
             int computerCounter = 0;
             for (int j = 0; j < numberOfPlays; j++)
             {
+                setUserWallet(getUserWallet() - getPowerBallPricePerPlay());
                 for (int k = 0; k < getMAX_PICK_NUM(); k++)
                 {
                     fiveSelect[k] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
                 }
                 powerBallPicks[computerCounter][0] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
                 numbersNowSelected(fiveSelect, computerCounter);
-                //timeToDraw(fiveSelect);
                 computerCounter++;
             }
         }
@@ -56,7 +58,8 @@ public class PowerBall extends lottoGame
             int tempCounter = 1;
             for (int k = 0; k < numberOfPlays; k++)
             {
-                System.out.print("Play " + (tempCounter) + " of 5");
+                setUserWallet(getUserWallet() - getPowerBallPricePerPlay());
+                System.out.print("\nPlay " + (tempCounter) + " of 5");
                 userSelectNumbers(fiveSelect, playCounter);
                 tempCounter++;
                 playCounter++;
@@ -66,6 +69,8 @@ public class PowerBall extends lottoGame
         {
             System.out.println("You did not specify yes or no, play again to restart");
         }
+
+        System.out.println("\nYour current wallet amount: $" + getUserWallet());
     }
 
     public static void userSelectNumbers(int[] fiveSelect, int counter)
@@ -93,18 +98,18 @@ public class PowerBall extends lottoGame
             //counter++;
         }
 
-        System.out.println("Okay! Your numbers are now selected.");
-        System.out.print("\nYour numbers for your first play are: ");
+        System.out.println("\nOkay! Your numbers are now selected.");
+        System.out.print("\nYour numbers for play #" + (counter + 1) + ": ");
         for (int i = 0; i < getMAX_PICK_NUM(); i++)
         {
-            System.out.print(whiteBallPicks[0][i] + ", ");
+            System.out.print(whiteBallPicks[counter][i] + ", ");
         }
-        System.out.println("with a PowerBall of: " + powerBallPicks[0][0]);
+        System.out.println("with a PowerBall of: " + powerBallPicks[counter][0]);
 
-        timeToDraw(fiveSelect);
+        timeToDraw();
     }
 
-    public static void timeToDraw(int[] fiveSelect)
+    public static void timeToDraw()
     {
         int[] drawCompare = new int[getMAX_PICK_NUM()];
 
@@ -112,6 +117,7 @@ public class PowerBall extends lottoGame
         {
             drawCompare[i] = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_POWERBALL_NUM());
         }
+
 
         System.out.println("\nTime to check your numbers!");
         System.out.print("The computer has drawn: ");
@@ -124,10 +130,10 @@ public class PowerBall extends lottoGame
         int tempPowerBall = generateRandomIntegers(getMIN_POWERBALL_NUM(), getMAX_REDPOWERBALL_NUM());
         System.out.printf("with a PowerBall of %d", tempPowerBall);
 
-        anyMatching(fiveSelect, drawCompare, tempPowerBall);
+        anyMatching(drawCompare, tempPowerBall);
     }
 
-    public static void anyMatching(int[] fiveSelect, int[] compareTo, int computerPowerBall)
+    public static void anyMatching(int[] compareTo, int computerPowerBall)
     {
         boolean powerBallHit = false;
         int matchHit = 0;
@@ -150,27 +156,70 @@ public class PowerBall extends lottoGame
                 //matchHit++; don't want the user to think they got x matching AND a powerball matching
                 powerBallHit = true;
             }
-
-            //rowCounter++;
             powerBallCounter++;
         }
 
         System.out.println("\nYou have " + matchHit + " matching number(s)!");
         if (powerBallHit)
-            System.out.println("You have a matching PowerBall!");
-    }
-}
-
-
-
-//Debug purposes
-        /*for (int[] arr: whiteBallPicks)
         {
-            System.out.print("\n");
-            System.out.println(Arrays.toString(arr));
+            System.out.println("You have a matching PowerBall!");
         }
 
-        for (int[] arr: powerBallPicks)
+        switch (matchHit)
         {
-            System.out.println(Arrays.toString(arr));
-        }*/
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                setUserWallet(getUserWallet() + 7);
+                System.out.print("You won $7.00!");
+                break;
+            case 4:
+                setUserWallet(getUserWallet() + 100);
+                System.out.print("You won $100.00!");
+                break;
+            case 5:
+                setUserWallet(getUserWallet() + 1000000);
+                System.out.print("You won $1,000,000!");
+                break;
+            default:
+                System.out.println("Defaulted!");
+                break;
+        }
+
+        // Can't use booleans inside switches, otherwise I would have
+        if (powerBallHit)
+        {
+            setUserWallet(getUserWallet() + 4);
+            System.out.print("You won $4.00!");
+        }
+        else if (powerBallHit && matchHit == 1)
+        {
+            setUserWallet(getUserWallet() + 4);
+            System.out.print("You won $4.00!");
+        }
+        else if (powerBallHit && matchHit == 2)
+        {
+            setUserWallet(getUserWallet() + 7);
+            System.out.print("You won $7.00!");
+        }
+        else if (powerBallHit && matchHit == 3)
+        {
+            setUserWallet(getUserWallet() + 100);
+            System.out.print("You won $100.00!");
+        }
+        else if (powerBallHit && matchHit == 4)
+        {
+            setUserWallet(getUserWallet() + 10000);
+            System.out.print("You won $10,000!");
+        }
+        else if (powerBallHit && matchHit == 5)
+        {
+            int grandPrize = generateRandomIntegers(1000000, 1000000000); // Between 1,000,000 and 1,000,000,000
+            System.out.print("YOU WON THE GRAND PRIZE!!!!" + grandPrize);
+        }
+    }
+}
