@@ -3,6 +3,9 @@ import java.util.*;
 /**
  * Created by AaronJordan on 4/7/14.
  */
+
+// I have chosen to do an interface for homework #4
+
 public class Control
 {
     public static void main(String[] args)

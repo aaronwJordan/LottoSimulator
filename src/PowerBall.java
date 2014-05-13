@@ -3,8 +3,7 @@ import java.util.*;
 /**
  * Created by AaronJordan on 4/7/14.
  */
-public class PowerBall extends lottoGame
-{
+public class PowerBall extends lottoGame {
     public PowerBall(int plays[][])
     {
         super(plays);
